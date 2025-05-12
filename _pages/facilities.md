@@ -1,6 +1,6 @@
 ---
 layout: page
-title: facilities
+title: Facilities
 permalink: /facilities/
 description:
 nav: true
