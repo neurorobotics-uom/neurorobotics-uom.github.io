@@ -2,7 +2,7 @@
 layout: page
 title: facilities
 permalink: /facilities/
-description: A growing collection of your cool projects.
+description:
 nav: true
 nav_order: 5
 display_categories: [work, fun]
