@@ -11,7 +11,7 @@ ninja.data = [{
     },
   },{id: "nav-people",
           title: "people",
-          description: "members of the lab or group",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/people/";
@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-projects",
           title: "projects",
-          description: "A growing collection of your cool projects.",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/projects/";
@@ -418,16 +418,31 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "people-wenzhi-bai",
+          section: "News",},{id: "people-chaoyuan-liang",
+          title: 'Chaoyuan Liang',
+          description: "fNIRS",
+          section: "People",handler: () => {
+              window.location.href = "/people/chaoyuan_liang/";
+            },},{id: "people-wending-heng",
+          title: 'Wending Heng',
+          description: "EMG",
+          section: "People",handler: () => {
+              window.location.href = "/people/wending_heng/";
+            },},{id: "people-wenzhi-bai",
           title: 'Wenzhi Bai',
-          description: "April 2024 to present. Robo-TMS.",
+          description: "Robo-TMS",
           section: "People",handler: () => {
               window.location.href = "/people/wenzhi_bai/";
             },},{id: "people-zhenhong-li",
           title: 'Zhenhong Li',
-          description: "Lecturer in Robotics and Control. Research interests include physical human-robot interaction, rehabilitation robotics, brain-computer interfaces, and neuromuscular interfaces.",
+          description: "Lecturer in Robotics and Control",
           section: "People",handler: () => {
               window.location.href = "/people/zhenhong_li/";
+            },},{id: "people-ziwen-wang",
+          title: 'Ziwen Wang',
+          description: "EEG",
+          section: "People",handler: () => {
+              window.location.href = "/people/ziwen_wang/";
             },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
