@@ -871,6 +871,11 @@ footer.sticky-bottom {
   }
 }
 
+.lab-logo {
+  content:var(--global-logo);
+  max-width: 100px;
+}
+
 // Rouge Color Customization
 figure.highlight {
   margin: 0 0 1rem;
