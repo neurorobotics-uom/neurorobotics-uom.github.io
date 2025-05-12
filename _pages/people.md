@@ -2,7 +2,7 @@
 layout: page
 permalink: /people/
 title: people
-description: members of the lab or group
+description: 
 nav: true
 nav_order: 1
 display_categories: [Principal Investigator, PhD Students]
