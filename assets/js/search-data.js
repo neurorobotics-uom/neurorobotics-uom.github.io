@@ -407,12 +407,7 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "books-the-godfather",
-          title: 'The Godfather',
-          description: "",
-          section: "Books",handler: () => {
-              window.location.href = "/books/the_godfather/";
-            },},{id: "news-a-simple-inline-announcement",
+      },{id: "news-a-simple-inline-announcement",
           title: 'A simple inline announcement.',
           description: "",
           section: "News",},{id: "news-a-long-announcement-with-details",
@@ -423,7 +418,17 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-project-1",
+          section: "News",},{id: "people-wenzhi-bai",
+          title: 'Wenzhi Bai',
+          description: "April 2024 to present. Robo-TMS.",
+          section: "People",handler: () => {
+              window.location.href = "/people/wenzhi_bai/";
+            },},{id: "people-zhenhong-li",
+          title: 'Zhenhong Li',
+          description: "Lecturer in Robotics and Control. Research interests include physical human-robot interaction, rehabilitation robotics, brain-computer interfaces, and neuromuscular interfaces.",
+          section: "People",handler: () => {
+              window.location.href = "/people/zhenhong_li/";
+            },},{id: "projects-project-1",
           title: 'project 1',
           description: "with background image",
           section: "Projects",handler: () => {
