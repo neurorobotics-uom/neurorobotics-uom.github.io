@@ -61,20 +61,20 @@
 .banner-overlay{
   position:absolute;
   bottom:20%; 
-  // right: 22%;
+  // right:clamp(0.1vw, 30%, 22%);
   right: calc(100vw - 78%);
   // transform:translate(22%,0);
   text-align:right;
   color:#fff;
   // display:inline-block;
   // text-shadow:0 0 6px rgba(0,0,0,.65);  /* keeps text legible */
-  width: 30%;                /* prevent super-long titles from overflowing */
+  width: clamp(20rem, 30%, 30%);                /* prevent super-long titles from overflowing */
   white-space: normal;           /* allow line breaks           */
   overflow-wrap: break-word;     /* break long words if needed  */
 }
 
 /* headline & sub-headline sizes */
-.banner-title   { font-size:2rem; font-weight:700; margin:0;white-space:nowrap；}
+.banner-title   { font-size:clamp(1.25rem, 1.2vw + 0.5rem, 2rem); font-weight:700; margin:0;}
 .banner-sub     { font-size:1.25rem; margin:0.25rem 0 0; }
 
 
@@ -106,9 +106,9 @@
 
   font-size: 2rem;       /* adjust to taste */
   font-weight: 700;
-  color: #fff;
+  color: var(--overlay-text-color);
+  text-shadow: 0 0 6px var(--overlay-text-shadow);
   text-align: center;    /* centre multi-line text */
-  text-shadow: 0 0 6px rgba(0,0,0,.65);
   letter-spacing: .03em;
 }
 
