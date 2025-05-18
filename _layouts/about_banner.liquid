@@ -11,9 +11,9 @@ layout: default
                  height:100vh;border-radius:0.5rem;position:relative;">
     {%- comment -%}  overlay text  {%- endcomment -%}
     <div class="banner-overlay">
-      <h1 class="banner-title">
+      <div class="banner-title">
         {{ page.banner_title   | default: "" }}
-      </h1>
+      </div>
       <p  class="banner-sub">
         {{ page.banner_subline | default: "" }}
       </p>

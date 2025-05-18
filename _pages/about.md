@@ -3,7 +3,7 @@
 layout: about_banner
 banner: assets/img/web_banner.jpg   # or omit and set site.about_banner in _config.yml
 banner_title:    "Advancing intuitive human–machine interfaces and personalized robotic interventions through interdisciplinary innovation"
-# banner_subline:  ""
+banner_subline:  ""
 banner2: assets/img/web_banner.jpg
 title: About
 permalink: /
@@ -12,8 +12,8 @@ subtitle:
 profile:
   align: right
   image: lab_logo_black.png
-  # image_light: lab_logo_black.png
-  # image_dark: lab_logo_white.png
+  image_light: lab_logo_black.png
+  image_dark: lab_logo_white.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
