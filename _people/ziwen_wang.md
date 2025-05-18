@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: profiles
 title: Ziwen Wang
 description: EEG
 img: assets/img/people/ziwen_wang.jpg
