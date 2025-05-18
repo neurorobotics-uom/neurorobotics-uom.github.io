@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: A novel robotic navigation system for precise transcranial magnetic brain stimulation
+description: 
+img: assets/img/project/InnovateUK.png
 importance: 2
-category: work
+category: Ongoing
 giscus_comments: true
 ---
 

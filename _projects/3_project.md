@@ -1,11 +1,11 @@
 ---
 layout: page
-title: project 3 with very long name
-description: a project that redirects to another website
-img: assets/img/7.jpg
+title: "PRO-Rehab: Personalized musculoskeletal model for safety-critical RObot-assisted ankle Rehabilitation"
+description: 
+img: assets/img/project/Royalsociety.png
 redirect: https://unsplash.com
 importance: 3
-category: work
+category: Ongoing
 ---
 
 Every project has a beautiful feature showcase page.

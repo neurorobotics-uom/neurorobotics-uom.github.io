@@ -1,10 +1,10 @@
 ---
 layout: page
-title: project 1
-description: with background image
-img: assets/img/12.jpg
+title: "FREEpHRI: Flexible, Robust and Efficient physical Human-robot Interaction with iterative learning and self-triggered role adaption"
+description: ""
+img: assets/img/project/EPSRC.png
 importance: 1
-category: work
+category: Ongoing
 related_publications: true
 ---
 
