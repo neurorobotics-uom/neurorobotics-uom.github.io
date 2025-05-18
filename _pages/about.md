@@ -52,15 +52,13 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
        alt="First banner">
 </div>
 
-asdasdasdasd
 
 <div class="image-overlay full-bleed">
-  <img src="{{ '/assets/img/web_banner.jpg' | relative_url }}"
+  <img src="{{ '/assets/img/banner/hiring_light.png' | relative_url }}"
        alt="Lab retreat 2025"
        class="w-100 rounded"
-       style="height:300px;object-fit:cover;">
-  <span class="overlay-text">
-  <a href="https://example.com/lab-overview"    
-       class="overlay-link">Our Lab • Spring 2025</a>
+       style="height:400px;object-fit:cover;">
+  <span class="overlay-text overlay-link">
+    We are looking for highly energetic and curious PhD students with a background in Robotics, Computer Science, Mechatronics and Control
   </span>
 </div>
