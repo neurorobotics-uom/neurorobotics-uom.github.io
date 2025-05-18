@@ -66,11 +66,56 @@ ninja.data = [{
             window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
           
         },
-      },{id: "facilities-franka-research-3",
+      },{id: "facilities-bambu-lab-x1-carbon-combo",
+          title: 'Bambu Lab X1 - Carbon Combo',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/10_facilities/";
+            },},{id: "facilities-franka-research-3",
           title: 'Franka Research 3',
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/1_facilities/";
+            },},{id: "facilities-106-channel-functional-near-infrared-spectroscopy",
+          title: '106 Channel Functional Near-infrared Spectroscopy',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/2_facilities/";
+            },},{id: "facilities-transcranial-magnetic-stimulation-tms",
+          title: 'Transcranial Magnetic Stimulation (TMS)',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/3_facilities/";
+            },},{id: "facilities-16-channel-eeg-gtec-usbamp",
+          title: '16 Channel EEG Gtec USBamp',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/4_facilities/";
+            },},{id: "facilities-delsys-trigno-wireless-emg-system",
+          title: 'Delsys Trigno™ Wireless EMG System',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/5_facilities/";
+            },},{id: "facilities-vicon-motion-capture-system",
+          title: 'Vicon Motion Capture System',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/6_facilities/";
+            },},{id: "facilities-amti-multi-axis-force-plates",
+          title: 'AMTI Multi Axis Force Plates',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/7_facilities/";
+            },},{id: "facilities-color-clibration-tool-datacolor-spyder",
+          title: 'Color Clibration Tool Datacolor Spyder',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/8_facilities/";
+            },},{id: "facilities-transcranial-direct-current-stimulation-tdcs",
+          title: 'Transcranial direct current stimulation (tDCS)',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/9_facilities/";
             },},{id: "news-our-paper-imtp-intention-matching-trajectory-prediction-for-autonomous-vehicles-received-best-paper-award-at-proceedings-of-the-2023-29th-international-conference-on-mechatronics-and-machine-vision-in-practice-m2vip",
           title: 'Our paper “IMTP: Intention-Matching Trajectory Prediction for Autonomous Vehicles” received Best Paper Award...',
           description: "",
