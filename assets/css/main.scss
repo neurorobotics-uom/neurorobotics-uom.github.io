@@ -7,20 +7,20 @@
 $max-content-width: {{ site.max_width }};
 
 @import
-  "variables",
-  "themes",
-  "layout",
-  "base",
-  "distill",
-  "cv",
-  "tabs",
-  "typograms",
-  "font-awesome/fontawesome",
-  "font-awesome/brands",
-  "font-awesome/solid",
-  "font-awesome/regular",
+  "custom.scss",
+  "variables.scss",
+  "themes.scss",
+  "layout.scss",
+  "base.scss",
+  "distill.scss",
+  "cv.scss",
+  "tabs.scss",
+  "typograms.scss",
+  "font-awesome/fontawesome.scss",
+  "font-awesome/brands.scss",
+  "font-awesome/solid.scss",
+  "font-awesome/regular.scss",
   "tabler-icons/tabler-icons.scss",
   "tabler-icons/tabler-icons-filled.scss",
-  "custom.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
