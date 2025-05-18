@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: 106 Channel Functional Near-infrared Spectroscopy
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/FNIRS.png
 importance: 1
 category: work
 related_publications: true

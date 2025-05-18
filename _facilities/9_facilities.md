@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: Transcranial direct current stimulation (tDCS)
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/tdcs.png
 importance: 1
 category: work
 related_publications: true

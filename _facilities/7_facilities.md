@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: AMTI Multi Axis Force Plates
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/AMTI.png
 importance: 1
 category: work
 related_publications: true

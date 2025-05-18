@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: 16 Channel EEG Gtec USBamp
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/EEG.png
 importance: 1
 category: work
 related_publications: true

@@ -11,7 +11,9 @@ subtitle:
 
 profile:
   align: right
-  image: lab_logo_black2.png
+  image: lab_logo_black.png
+  # image_light: lab_logo_black.png
+  # image_dark: lab_logo_white.png
   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: Bambu Lab X1 - Carbon Combo
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/BambuLab.png
 importance: 1
 category: work
 related_publications: true

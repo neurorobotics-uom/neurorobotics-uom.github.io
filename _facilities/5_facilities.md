@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Franka Research 3
+title: Delsys Trigno™ Wireless EMG System
 description: 
-img: assets/img/facilities/franka2.png
+img: assets/img/facilities/Delsys.png
 importance: 1
 category: work
 related_publications: true

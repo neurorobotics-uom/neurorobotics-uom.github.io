@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Franka Research 3
+title: Transcranial Magnetic Stimulation (TMS)
 description: 
-img: assets/img/facilities/franka2.png
-importance: 1
+img: assets/img/facilities/TMS.png
+importance: 2
 category: work
 related_publications: true
 ---
