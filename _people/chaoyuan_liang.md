@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: profiles
 title: Chaoyuan Liang
 description: fNIRS
 img: assets/img/people/chaoyuan_liang.jpg

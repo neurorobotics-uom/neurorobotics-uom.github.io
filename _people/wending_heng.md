@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: profiles
 title: Wending Heng
 description: EMG
 img: assets/img/people/wending_heng.jpg

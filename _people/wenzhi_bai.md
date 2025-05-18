@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: profiles
 title: Wenzhi Bai
 description: Robo-TMS
 img: assets/img/people/wenzhi_bai.png

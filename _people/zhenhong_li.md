@@ -1,5 +1,5 @@
 ---
-layout: profile
+layout: profiles
 title: Zhenhong Li
 description: Lecturer in Robotics and Control
 img: assets/img/people/zhenhong_li.png
