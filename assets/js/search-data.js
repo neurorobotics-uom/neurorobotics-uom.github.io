@@ -16,13 +16,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/people/";
           },
-        },{id: "nav-researches",
-          title: "Researches",
-          description: "",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/researches/";
-          },
         },{id: "nav-projects",
           title: "Projects",
           description: "",
@@ -189,19 +182,19 @@ ninja.data = [{
           description: "EEG",
           section: "People",handler: () => {
               window.location.href = "/people/ziwen_wang/";
-            },},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+            },},{id: "projects-freephri-flexible-robust-and-efficient-physical-human-robot-interaction-with-iterative-learning-and-self-triggered-role-adaption",
+          title: 'FREEpHRI: Flexible, Robust and Efficient physical Human-robot Interaction with iterative learning and self-triggered...',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
-          title: 'project 2',
-          description: "a project with a background image and giscus comments",
+            },},{id: "projects-a-novel-robotic-navigation-system-for-precise-transcranial-magnetic-brain-stimulation",
+          title: 'A novel robotic navigation system for precise transcranial magnetic brain stimulation',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
-            },},{id: "projects-project-3-with-very-long-name",
-          title: 'project 3 with very long name',
-          description: "a project that redirects to another website",
+            },},{id: "projects-pro-rehab-personalized-musculoskeletal-model-for-safety-critical-robot-assisted-ankle-rehabilitation",
+          title: 'PRO-Rehab: Personalized musculoskeletal model for safety-critical RObot-assisted ankle Rehabilitation',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
             },},{id: "projects-project-4",
