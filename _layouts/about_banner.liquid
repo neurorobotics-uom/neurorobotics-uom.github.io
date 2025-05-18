@@ -6,15 +6,12 @@ layout: default
 {% if page.banner or site.about_banner %}
   {% assign hero = page.banner | default: site.about_banner %}
 
-  <header class="hero full-bleed hero--top mb-4"
-          style="background:url('{{ hero | relative_url }}') center/cover;
-                 height:100vh;border-radius:0.5rem;position:relative;">
-    {%- comment -%}  overlay text  {%- endcomment -%}
+  <header class="hero full-bleed hero--top mb-4 banner-hero" data-banner="{{ hero | relative_url }}">
     <div class="banner-overlay">
       <div class="banner-title">
-        {{ page.banner_title   | default: "" }}
+        {{ page.banner_title | default: "" }}
       </div>
-      <p  class="banner-sub">
+      <p class="banner-sub">
         {{ page.banner_subline | default: "" }}
       </p>
     </div>

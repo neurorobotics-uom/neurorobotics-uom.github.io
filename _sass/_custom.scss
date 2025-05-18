@@ -73,9 +73,17 @@
   overflow-wrap: break-word;     /* break long words if needed  */
 }
 
-// /* headline & sub-headline sizes */
-// .banner-title   { font-size: clamp(1.25rem, 1.2vw + 0.5rem, 2rem); font-weight: 700; margin: 0;  color: var(--overlay-text-color);}
-// .banner-sub     { font-size: 1.25rem; margin: 0.25rem 0 0; }
+
+.banner-hero {
+  background: var(--hero-bg, url("/assets/img/web_banner.jpg")) center/cover no-repeat;
+  height: 100vh;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* headline & sub-headline sizes */
+.banner-title   { font-size: clamp(1.25rem, 1.2vw + 0.5rem, 2rem); font-weight: 700; margin: 0;  color: var(--overlay-text-color);}
+.banner-sub     { font-size: 1.25rem; margin: 0.25rem 0 0; }
 
 
 
