@@ -156,6 +156,8 @@ collections:
     output: true
   facilities:
     output: false
+  researches:
+    output: true
 
 
 # -----------------------------------------------------------------------------
