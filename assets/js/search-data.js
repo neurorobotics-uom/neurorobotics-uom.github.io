@@ -407,7 +407,12 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "news-our-paper-imtp-intention-matching-trajectory-prediction-for-autonomous-vehicles-received-best-paper-award-at-proceedings-of-the-2023-29th-international-conference-on-mechatronics-and-machine-vision-in-practice-m2vip",
+      },{id: "facilities-franka-research-3",
+          title: 'Franka Research 3',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/1_facilities/";
+            },},{id: "news-our-paper-imtp-intention-matching-trajectory-prediction-for-autonomous-vehicles-received-best-paper-award-at-proceedings-of-the-2023-29th-international-conference-on-mechatronics-and-machine-vision-in-practice-m2vip",
           title: 'Our paper “IMTP: Intention-Matching Trajectory Prediction for Autonomous Vehicles” received Best Paper Award...',
           description: "",
           section: "News",},{id: "news-our-paper-distributed-collision-free-bearing-coordination-of-multi-uav-systems-with-actuator-faults-and-time-delays-was-accepted-by-ieee-transactions-on-intelligent-transportation-systems",
