@@ -1,0 +1,115 @@
+/*  _sass/_custom.scss
+    Makes an element “full-bleed” — it escapes the .container and spans 100 vw  */
+    .full-bleed {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      width: 100vw;
+    
+      /* Optional tweaks — adjust or remove as you like */
+      // max-height: 260px;   // keep the hero at a nice height
+      object-fit: cover;   // crop the image rather than stretch it
+    }
+
+
+    .hero--top {
+      margin-top: -180px;      /* same value as body padding-top */
+    }
+
+    .navbar {
+      background: rgba(255, 255, 255, 0);   /* 0 = fully transparent, 1 = solid */
+      /*box-shadow: 0 0 1rem rgba(0,0,0,.05);    /* optional subtle shadow */
+      /*backdrop-filter: blur(6px);              /* “frosted glass” feel (optional) */
+    }
+
+    .navbar--hidden {
+      transform: translateY(-100%);
+    }
+
+    // #progress, progress { display: none !important; } /* disable the progressive bar, */
+    //                                       /* if you want to enableplease comment the line*/
+    .navbar { border-bottom: none !important; } /* disable the botton 1px line below the navigation bar */
+
+/* ────────────────────────────────────────────────────────── */
+/* Inject HEALab logo on every page by styling the navbar   */
+/* ────────────────────────────────────────────────────────── */
+
+/* 1. Make sure the <nav> can show a background image */
+#navbar {
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px auto; /* constrain to 40px high, auto width */
+  padding-left: 0rem;         /* room for that 40px logo + gap */
+  /* now draw the logo */
+  background-image: url('{{ "/assets/img/lab_logo_black2.png" | relative_url }}');
+}
+
+/* 2. Push the toggler / nav items right so they don’t overlap */
+#navbar .container {
+  position: relative;         /* ensure padding-left takes effect */
+}
+
+/* 3. (Optional) If you have a brand link on sub-pages, keep it from overlapping the logo */
+#navbar .navbar-brand {
+  margin-left: 2.5rem;        /* shift it right of the background logo */
+}
+
+
+/* centre the text block */
+.banner-overlay{
+  position:absolute;
+  bottom:20%; 
+  // right: 22%;
+  right: calc(100vw - 78%);
+  // transform:translate(22%,0);
+  text-align:right;
+  color:#fff;
+  // display:inline-block;
+  // text-shadow:0 0 6px rgba(0,0,0,.65);  /* keeps text legible */
+  width: 30%;                /* prevent super-long titles from overflowing */
+  white-space: normal;           /* allow line breaks           */
+  overflow-wrap: break-word;     /* break long words if needed  */
+}
+
+/* headline & sub-headline sizes */
+.banner-title   { font-size:2rem; font-weight:700; margin:0;white-space:nowrap；}
+.banner-sub     { font-size:1.25rem; margin:0.25rem 0 0; }
+
+
+
+    /* generic helper: make any element escape Bootstrap’s .container */
+.breakout {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+}
+
+/* (optional) a little side-padding so cards don't kiss the window edge */
+.breakout { padding-left: 1rem; padding-right: 1rem; }
+
+/* Already present – keeps the wrapper as the positioning context */
+.image-overlay {
+  position: relative;
+}
+
+/* NEW – centre the text block perfectly */
+.image-overlay .overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   /* shifts back half its own size */
+
+  font-size: 2rem;       /* adjust to taste */
+  font-weight: 700;
+  color: #fff;
+  text-align: center;    /* centre multi-line text */
+  text-shadow: 0 0 6px rgba(0,0,0,.65);
+  letter-spacing: .03em;
+}
+
+

@@ -5,9 +5,11 @@ permalink: /facilities/
 description:
 nav: true
 nav_order: 5
-display_categories: [work, fun]
+display_categories: 
 horizontal: false
 ---
+
+
 
 <!-- pages/projects.md -->
 <div class="projects">
@@ -62,4 +64,23 @@ horizontal: false
   </div>
   {% endif %}
 {% endif %}
+</div>
+
+
+<div class="row">
+  {% for facility in site.facilities %}
+    <div class="col-sm-4 mb-4">
+      <div class="card project-card h-100">
+        <a href="{{ facility.url | relative_url }}">
+          <img src="{{ facility.img | prepend: '/assets/img/' | relative_url }}"
+               class="card-img-top img-fluid rounded"
+               alt="{{ facility.title }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ facility.title }}</h5>
+            <p class="card-text">{{ facility.description }}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  {% endfor %}
 </div>
