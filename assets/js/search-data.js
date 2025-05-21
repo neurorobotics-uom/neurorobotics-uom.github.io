@@ -47,8 +47,8 @@ ninja.data = [{
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/1_facilities/";
-            },},{id: "facilities-106-channel-functional-near-infrared-spectroscopy",
-          title: '106 Channel Functional Near-infrared Spectroscopy',
+            },},{id: "facilities-functional-near-infrared-spectroscopy-fnirs",
+          title: 'Functional Near-infrared Spectroscopy (FNIRS)',
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/2_facilities/";
@@ -57,8 +57,8 @@ ninja.data = [{
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/3_facilities/";
-            },},{id: "facilities-16-channel-eeg-gtec-usbamp",
-          title: '16 Channel EEG Gtec USBamp',
+            },},{id: "facilities-gtec-usbamp-eeg",
+          title: 'Gtec USBamp EEG',
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/4_facilities/";
