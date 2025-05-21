@@ -79,8 +79,8 @@
   overflow-wrap: break-word;     /* break long words if needed  */
 }
 
-.banner-hero {
-  background: var(--hero-bg, url("/assets/img/banner/hiring3.png")) center/cover no-repeat;
+.banner-hero{
+  background: var(--hero-bg, url("/assets/img/banner/TMS_banner2.png")) center/cover no-repeat;
   height: 100vh;
   // calc(100vh + 2rem);
   border-radius: 0.5rem;
@@ -125,7 +125,7 @@ font-size: clamp(1.2rem, 2.5vw, 2.5rem);
 
 
 /* (optional) a little side-padding so cards don't kiss the window edge */
-.breakout { padding-left: 0rem; padding-right: 0rem; }
+// .breakout { padding-left: 0rem; padding-right: 0rem; }
 
 /* Already present – keeps the wrapper as the positioning context */
 .image-overlay {
