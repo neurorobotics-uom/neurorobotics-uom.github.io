@@ -2,7 +2,7 @@
 layout: page
 title: 106 Channel Functional Near-infrared Spectroscopy
 description: 
-img: assets/img/facilities/FNIRS.png
+img: assets/img/facilities/FNIRS.JPG
 importance: 1
 category: work
 related_publications: true

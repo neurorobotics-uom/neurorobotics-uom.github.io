@@ -2,7 +2,7 @@
 layout: page
 title: Transcranial direct current stimulation (tDCS)
 description: 
-img: assets/img/facilities/tdcs.png
+img: assets/img/facilities/tdcs.jpg
 importance: 1
 category: work
 related_publications: true
