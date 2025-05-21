@@ -6,7 +6,7 @@ layout: default
 {% if page.banner or site.about_banner %}
   {% assign hero = page.banner | default: site.about_banner %}
 
-  <header class="hero full-bleed hero--top mb-4 banner-hero" data-banner="{{ hero | relative_url }}">
+  <header class="hero full-bleed hero--top banner-hero" data-banner="{{ hero | relative_url }}">
     <div class="banner-overlay">
       <div class="banner-title">
         {{ page.banner_title | default: "" }}

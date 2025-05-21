@@ -81,10 +81,12 @@
 
 .banner-hero{
   background: var(--hero-bg, url("/assets/img/banner/TMS_banner2.png")) center/cover no-repeat;
-  height: 100vh;
+  height: calc(100vh + 0.2rem);
   // calc(100vh + 2rem);
   border-radius: 0.5rem;
-  margin-bottom: 0;          /* Remove any bottom margin */
+  margin-bottom: 3rem;          /* Remove any bottom margin */
+  padding-bottom: 1rem;
+  border-bottom-width: 1rem;
   position: relative;
   
 }
@@ -154,7 +156,9 @@ font-size: clamp(1.2rem, 2.5vw, 2.5rem);
   position: relative;
   border: 0px solid var(--global-theme-color, #234);
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  margin-bottom: -1rem;
+  margin-bottom: -1.5rem;
+  padding: 0rem;
+  border: 0rem;
 }
 
 .hire-banner img {
