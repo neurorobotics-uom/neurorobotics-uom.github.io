@@ -73,7 +73,8 @@
   color: var(--overlay-text-color);
   // display:inline-block;
   // text-shadow:0 0 6px rgba(0,0,0,.65);  /* keeps text legible */
-  width: clamp(calc(var(--banner-titleblock-width)* 1.2rem), calc(var(--banner-titleblock-width)* 2.5vw), calc(var(--banner-titleblock-width)* 2.5rem));                /* prevent super-long titles from overflowing */
+  width: 80vw;
+  // width: clamp(calc(var(--banner-titleblock-width)* 1.2rem), calc(var(--banner-titleblock-width)* 2.5vw), calc(var(--banner-titleblock-width)* 2.5rem));                /* prevent super-long titles from overflowing */
   white-space: normal;           /* allow line breaks           */
   overflow-wrap: break-word;     /* break long words if needed  */
 }
