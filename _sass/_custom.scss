@@ -81,7 +81,7 @@
 
 .banner-hero{
   background: var(--hero-bg, url("/assets/img/banner/TMS_banner2.png")) center/cover no-repeat;
-  height: 100vh;
+  height: calc(100vh + 30px);
   // calc(100vh + 2rem);
   border-radius: 0.5rem;
   margin-bottom: 0;          /* Remove any bottom margin */
