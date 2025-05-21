@@ -80,8 +80,9 @@
 }
 
 .banner-hero {
-  // background: var(--hero-bg, url("/assets/img/banner/hiring3.png")) center/cover no-repeat;
-  height: calc(100vh + 2rem);
+  background: var(--hero-bg, url("/assets/img/banner/hiring3.png")) center/cover no-repeat;
+  height: 100vh;
+  // calc(100vh + 2rem);
   border-radius: 0.5rem;
   position: relative;
 }
