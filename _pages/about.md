@@ -1,24 +1,23 @@
 ---
 #layout: about
 layout: about_banner
-banner: assets/img/web_banner.jpg   # or omit and set site.about_banner in _config.yml
+banner: "/assets/img/web_banner.JPG"   # or omit and set site.about_banner in _config.yml
 banner_title:    "Advancing intuitive human–machine interfaces and personalized robotic interventions through interdisciplinary innovation"
 banner_subline:  ""
-banner2: assets/img/web_banner.jpg
 title: About
 permalink: /
 subtitle:
-
-profile:
-  align: right
-  image: lab_logo_black.png
-  image_light: lab_logo_black.png
-  image_dark: lab_logo_white.png
-  image_circular: false # crops the image to make it circular
-  # more_info: >
-  #   <p>555 your office number</p>
-  #   <p>123 your address street</p>
-  #   <p>Your City, State 12345</p>
+hire_banner_title: "We are looking for highly energetic and curious PhD students with a background in Robotics, Computer Science, Mechatronics and Control Engineering (zhenhong.li@manchester.ac.uk)"
+# profile:
+#   align: right
+#   image: lab_logo_black.png
+#   image_light: lab_logo_black.png
+#   image_dark: lab_logo_white.png
+#   image_circular: false # crops the image to make it circular
+#   # more_info: >
+#   #   <p>555 your office number</p>
+#   #   <p>123 your address street</p>
+#   #   <p>Your City, State 12345</p>
 
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
@@ -45,20 +44,3 @@ Put your address / P.O. box / other info right below your picture. You can also 
 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
-<div class="full-bleed mb-4">
-  <img src="{{ '/assets/img/web_banner.jpg' | relative_url }}"
-       class="w-100 rounded"
-       style="height:560px;object-fit:cover;"   
-       alt="First banner">
-</div>
-
-
-<div class="image-overlay full-bleed">
-  <img src="{{ '/assets/img/banner/hiring_light.png' | relative_url }}"
-       alt="Lab retreat 2025"
-       class="w-100 rounded"
-       style="height:400px;object-fit:cover;">
-  <span class="overlay-text overlay-link">
-    We are looking for highly energetic and curious PhD students with a background in Robotics, Computer Science, Mechatronics and Control
-  </span>
-</div>

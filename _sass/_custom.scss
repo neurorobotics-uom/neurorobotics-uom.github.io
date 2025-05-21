@@ -30,7 +30,7 @@
 
     // #progress, progress { display: none !important; } /* disable the progressive bar, */
     //                                       /* if you want to enableplease comment the line*/
-    .navbar { border-bottom: none !important; } /* disable the botton 1px line below the navigation bar */
+    // .navbar { border-bottom: none !important; } /* disable the botton 1px line below the navigation bar */
 
 /* ────────────────────────────────────────────────────────── */
 /* Inject HEALab logo on every page by styling the navbar   */
@@ -39,9 +39,9 @@
 /* 1. Make sure the <nav> can show a background image */
 #navbar {
   background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 40px auto; /* constrain to 40px high, auto width */
-  padding-left: 0rem;         /* room for that 40px logo + gap */
+  // background-position: left center;
+  // background-size: 40px auto; /* constrain to 40px high, auto width */
+  // padding-left: 0rem;         /* room for that 40px logo + gap */
   /* now draw the logo */
   // background-image: url('{{ "/assets/img/lab_logo_black2.png" | relative_url }}');
 }
@@ -53,36 +53,50 @@
 
 /* 3. (Optional) If you have a brand link on sub-pages, keep it from overlapping the logo */
 #navbar .navbar-brand {
-  margin-left: 2.5rem;        /* shift it right of the background logo */
+  margin-left: 0rem;        /* shift it right of the background logo */
 }
 
+
+:root {
+  --banner-titleblock-width: 30; /* used to define how many characters will be included as one line for the banner text box */
+}
 
 /* centre the text block */
 .banner-overlay{
   position: absolute;
-  bottom: 20%; 
+  top: 30%; 
   // right:clamp(0.1vw, 30%, 22%);
-  right: 22vw;
-  // transform:translate(22%,0);
-  text-align: right;
+  right: 50%;
+  // right: 15vw;
+  transform:translate(50%,0);
+  text-align: center;
   color: var(--overlay-text-color);
   // display:inline-block;
   // text-shadow:0 0 6px rgba(0,0,0,.65);  /* keeps text legible */
-  width: clamp(20rem, 30%, 30%);                /* prevent super-long titles from overflowing */
+  width: clamp(calc(var(--banner-titleblock-width)* 1.2rem), calc(var(--banner-titleblock-width)* 2.5vw), calc(var(--banner-titleblock-width)* 2.5rem));                /* prevent super-long titles from overflowing */
   white-space: normal;           /* allow line breaks           */
   overflow-wrap: break-word;     /* break long words if needed  */
 }
 
 .banner-hero {
-  background: var(--hero-bg, url("/assets/img/web_banner.jpg")) center/cover no-repeat;
-  height: 100vh;
+  background: var(--hero-bg, url("/assets/img/banner/TMS_banner2.png")) center/cover no-repeat;
+  height: calc(100vh + 2rem);
   border-radius: 0.5rem;
   position: relative;
 }
 
+/* setting for logo on about page */
+.banner-overlay img {
+  width: 15vw;
+  // object-fit: cover;
+  border-radius: 1rem;
+  /* any more custom styles */
+}
+
+
 /* headline & sub-headline sizes */
 .banner-overlay .banner-title {
-  font-size:  max(1.5vw,1rem); 
+font-size: clamp(1.2rem, 2.5vw, 2.5rem);
   font-weight: 700; 
   margin: 0;  color: 
   var(--overlay-text-color);
@@ -103,8 +117,13 @@
   width: 100vw;
 }
 
+
+
+
+
+
 /* (optional) a little side-padding so cards don't kiss the window edge */
-.breakout { padding-left: 1rem; padding-right: 1rem; }
+.breakout { padding-left: 0rem; padding-right: 0rem; }
 
 /* Already present – keeps the wrapper as the positioning context */
 .image-overlay {
@@ -124,3 +143,42 @@
   text-align: center;    /* centre multi-line text */
   letter-spacing: .03em;
 }
+
+
+.hire-banner {
+  /* Example styles */
+  position: relative;
+  border: 0px solid var(--global-theme-color, #234);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  margin-bottom: -1rem;
+}
+
+.hire-banner img {
+  height: 560px;
+  object-fit: cover;
+  border-radius: 1rem;
+  /* any more custom styles */
+}
+
+
+.hire-banner .banner-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   /* shifts back half its own size */
+  display: flex;               /* Centers child both ways */
+  width: 80vw;
+  text-align: center;
+  // align-items: center;         /* Vertically center */
+  // justify-content: center;     /* Horizontally center */
+  pointer-events: none;        /* Text doesn't block image clicks, optional */
+}
+
+.hire-banner .banner-title{
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  font-weight: 700; 
+  margin: 0;  color: 
+  var(--overlay-text-color);
+
+}
+

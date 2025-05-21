@@ -11,6 +11,8 @@ layout: default
       <div class="banner-title">
         {{ page.banner_title | default: "" }}
       </div>
+      <img src="{{ '/assets/img/lab_logo_white.png' | relative_url }}"
+      >
       <p class="banner-sub">
         {{ page.banner_subline | default: "" }}
       </p>
@@ -64,6 +66,17 @@ layout: default
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
+
+<div class="full-bleed hire-banner">
+  <img src="{{ '/assets/img/banner/hiring3.png' | relative_url }}"
+       class="w-100 rounded"
+       alt="Hire banner">
+  <div class="banner-overlay">
+    <div class="banner-title">
+      {{page.hire_banner_title | default: "" }}
+    </div>
+  </div>
+</div>
 
     <!-- Latest posts -->
     {% if page.latest_posts and page.latest_posts.enabled %}

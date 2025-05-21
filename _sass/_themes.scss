@@ -6,10 +6,11 @@
 
 :root {
   color-scheme: light;
+  --global-nav-text-color: #{$white-color};
   --global-bg-color: #{$white-color};
   --global-transparent-bg-color: #{$white-color-transparent};
   --global-code-bg-color: #{$code-bg-color-light};
-  --overlay-text-color: #{$black-color};
+  --overlay-text-color: #{$white-color};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$purple-color};
