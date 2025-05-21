@@ -1,7 +1,7 @@
 ---
 #layout: about
 layout: about_banner
-banner: "/assets/img/web_banner.jpg"   # or omit and set site.about_banner in _config.yml
+banner: "/assets/img/web_banner.jpg"   #this does not specify the lcoation of top banner, the lcoation need to be set in _custom this just can not be empty.
 banner_title:    "Advancing intuitive human–machine interfaces and personalized robotic interventions through interdisciplinary innovation"
 banner_subline:  ""
 title: About

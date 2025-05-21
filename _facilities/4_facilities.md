@@ -1,11 +1,12 @@
 ---
 layout: page
-title: 16 Channel EEG Gtec USBamp
+title: Gtec USBamp EEG
 description: 
 img: assets/img/facilities/EEG.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
+redirect: /facilities/
 ---
 
 <!-- Every project has a beautiful feature showcase page.

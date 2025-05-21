@@ -6,6 +6,7 @@ img: assets/img/project/Royalsociety.png
 redirect: https://unsplash.com
 importance: 3
 category: Ongoing
+redirect: /projects/
 ---
 
 Every project has a beautiful feature showcase page.

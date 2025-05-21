@@ -6,6 +6,7 @@ img: assets/img/project/InnovateUK.png
 importance: 2
 category: Ongoing
 giscus_comments: true
+redirect: /projects/
 ---
 
 Every project has a beautiful feature showcase page.

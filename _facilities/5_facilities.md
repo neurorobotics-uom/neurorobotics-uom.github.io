@@ -5,7 +5,8 @@ description:
 img: assets/img/facilities/Delsys.png
 importance: 1
 category: work
-related_publications: true
+related_publications: false
+redirect: /facilities/
 ---
 
 <!-- Every project has a beautiful feature showcase page.

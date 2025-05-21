@@ -6,6 +6,7 @@ img: assets/img/project/EPSRC.png
 importance: 1
 category: Ongoing
 related_publications: true
+redirect: /projects/
 ---
 
 Every project has a beautiful feature showcase page.

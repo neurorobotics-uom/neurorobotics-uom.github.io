@@ -84,7 +84,9 @@
   height: 100vh;
   // calc(100vh + 2rem);
   border-radius: 0.5rem;
+  margin-bottom: 0;          /* Remove any bottom margin */
   position: relative;
+  
 }
 
 /* setting for logo on about page */
@@ -156,7 +158,7 @@ font-size: clamp(1.2rem, 2.5vw, 2.5rem);
 }
 
 .hire-banner img {
-  height: 560px;
+  height: 60vh;
   object-fit: cover;
   border-radius: 1rem;
   /* any more custom styles */
