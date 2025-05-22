@@ -245,13 +245,14 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
+  height: 64px;         // set a fixed height
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: var(--global-transparent-bg-color);
-  opacity: 0.95;
+  background-color: #{$black-color};
+  opacity: 0.8;
 }
 
 .navbar .dropdown-menu {
-  background-color: var(--global-bg-color);
+  background-color: var(--global-divider-color);
   border: 1px solid var(--global-divider-color);
 
   a:not(.active) {
@@ -266,6 +267,17 @@ ul.task-list input[type="checkbox"] {
     border-top: 1px solid var(--global-divider-color) !important;
   }
 }
+
+
+
+.navbar-collapse {
+  background-color: #{$black-color};
+}
+.navbar-collapse .nav-link {
+  color: var(--global-nav-text-color);
+}
+
+
 
 .dropdown-item {
   color: var(--global-text-color);
@@ -284,11 +296,11 @@ ul.task-list input[type="checkbox"] {
   }
 
   .navbar-brand {
-    color: var(--global-text-color);
+    color: var(--global-nav-text-color);
   }
 
   .navbar-nav .nav-item .nav-link {
-    color: var(--global-text-color);
+    color: var(--global-nav-text-color);
 
     &:hover {
       color: var(--global-hover-color);
@@ -349,7 +361,7 @@ ul.task-list input[type="checkbox"] {
     display: block;
     width: 22px;
     height: 2px;
-    background-color: var(--global-text-color);
+    background-color: var(--global-nav-text-color);
     border-radius: 1px;
     margin-bottom: 4px;
     transition: all 0.2s;

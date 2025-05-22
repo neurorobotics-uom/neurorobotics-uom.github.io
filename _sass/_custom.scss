@@ -18,15 +18,15 @@
       margin-top: -150px;      /* same value as body padding-top */
     }
 
-    .navbar {
-      background: rgba(255, 255, 255, 0);   /* 0 = fully transparent, 1 = solid */
-      /*box-shadow: 0 0 1rem rgba(0,0,0,.05);    /* optional subtle shadow */
-      /*backdrop-filter: blur(6px);              /* “frosted glass” feel (optional) */
-    }
+    // .navbar {
+    //   background: rgba(255, 255, 255, 0);   /* 0 = fully transparent, 1 = solid */
+    //   /*box-shadow: 0 0 1rem rgba(0,0,0,.05);    /* optional subtle shadow */
+    //   /*backdrop-filter: blur(6px);              /* “frosted glass” feel (optional) */
+    // }
 
-    .navbar--hidden {
-      transform: translateY(-100%);
-    }
+    // .navbar--hidden {
+    //   transform: translateY(-100%);
+    // }
 
     // #progress, progress { display: none !important; } /* disable the progressive bar, */
     //                                       /* if you want to enableplease comment the line*/
@@ -46,15 +46,15 @@
   // background-image: url('{{ "/assets/img/lab_logo_black2.png" | relative_url }}');
 }
 
-/* 2. Push the toggler / nav items right so they don’t overlap */
-#navbar .container {
-  position: relative;         /* ensure padding-left takes effect */
-}
+// /* 2. Push the toggler / nav items right so they don’t overlap */
+// #navbar .container {
+//   position: relative;         /* ensure padding-left takes effect */
+// }
 
-/* 3. (Optional) If you have a brand link on sub-pages, keep it from overlapping the logo */
-#navbar .navbar-brand {
-  margin-left: 0rem;        /* shift it right of the background logo */
-}
+// /* 3. (Optional) If you have a brand link on sub-pages, keep it from overlapping the logo */
+// #navbar .navbar-brand {
+//   // margin-left: 0rem;        /* shift it right of the background logo */
+// }
 
 
 :root {
