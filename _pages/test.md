@@ -1,11 +1,14 @@
 ---
 #layout: about
 layout: about_banner
+description:
+nav: false
+nav_order: 2
 banner: "/assets/img/web_banner.jpg"   #this does not specify the lcoation of top banner, the lcoation need to be set in _custom this just can not be empty.
 banner_title:    "Advancing intuitive human–machine interfaces and personalized robotic interventions through interdisciplinary innovation"
 banner_subline:  ""
-title: About
-permalink: /
+title: test
+permalink: /test/
 subtitle:
 hire_banner_title: "We are looking for highly energetic and curious PhD students with a background in Robotics, Computer Science, Mechatronics and Control Engineering (zhenhong.li@manchester.ac.uk)"
 # profile:
@@ -25,7 +28,7 @@ social: false # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 3 # leave blank to include all the news in the `_news` folder
+  limit: 10 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
@@ -45,8 +48,11 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
 
-<!-- Swiper CSS load external function-->   
+
+
+<!-- Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
@@ -56,7 +62,6 @@ Link to your social media connections, too. This theme is set up to use [Font Aw
     fadeEffect: {
       crossFade: true
     },
-    speed: 1000,  // 动画切换时长，单位毫秒
     loop: true,
     autoplay: {
       delay: 3000,
