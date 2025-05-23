@@ -236,8 +236,9 @@ font-size: clamp(1.5rem, 2.5vw, 2.5rem);
 }
 
 .hire-banner img {
-  height: 60vh;
+  height: 50vh;
   object-fit: cover;
+  object-position: center;
   border-radius: 1rem;
   /* any more custom styles */
 }

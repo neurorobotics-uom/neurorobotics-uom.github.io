@@ -7,7 +7,9 @@ banner_subline:  ""
 title: About
 permalink: /
 subtitle:
-hire_banner_title: "We are looking for highly energetic and curious PhD students with a background in Robotics, Computer Science, Mechatronics and Control Engineering (zhenhong.li@manchester.ac.uk)"
+hire_banner_title: "We are looking for highly energetic and curious PhD students. If you are interested in joining us, please contact zhenhong.li@manchester.ac.uk"
+
+
 # profile:
 #   align: right
 #   image: lab_logo_black.png
@@ -36,13 +38,11 @@ latest_posts:
 ---
 
 
+Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by [Dr. Zhenhong Li](https://alvishub.github.io/), we conduct research at the intersection of neuroscience, biomechanics, and robotics, with a focus on brain–computer interfaces, neuromusculoskeletal modeling, and robot-assisted interventions.  We aim to understand human neuromechanical function, advance physiological signal processing, and develop intelligent control systems for assistive and medical robots.  Our mission is to develop human-centered assistive and rehabilitative technologies to improve quality of life through interdisciplinary innovation.
+
+We welcome students from a wide range of backgrounds: biomedical engineering, mechanical engineering, computer science, control engineering, and robotics.
 
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
 
 
 <!-- Swiper CSS load external function-->   
