@@ -46,10 +46,10 @@ We welcome students from a wide range of backgrounds: biomedical engineering, me
 
 
 <!-- Swiper CSS load external function-->   
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>
 
 
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="/assets/js/swiper-bundle.min.js"></script>
 <script>
   var swiper = new Swiper('.mySwiper', {
     effect: 'fade',
@@ -59,7 +59,7 @@ We welcome students from a wide range of backgrounds: biomedical engineering, me
     speed: 1000,  // 动画切换时长，单位毫秒
     loop: true,
     autoplay: {
-      delay: 3000,
+      delay: 4000,
       disableOnInteraction: false
     },
     pagination: {
@@ -69,6 +69,19 @@ We welcome students from a wide range of backgrounds: biomedical engineering, me
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
-    }
+    },
+    cubeEffect: {
+    shadow: false,           // 显示阴影
+    slideShadows: true,     // 幻灯片阴影
+    shadowOffset: 60,
+    shadowScale: 0.94
+  },
+  coverflowEffect: {
+  rotate: 50,
+  stretch: 0,
+  depth: 100,
+  modifier: 1,
+  slideShadows: false
+}
   });
 </script>

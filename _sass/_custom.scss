@@ -81,6 +81,7 @@
   left: 12px;  /* 默认 prev */
   /* 移除大图标 */
   --swiper-navigation-size: 16px;
+  z-index: 10;
 }
 .mySwiper .swiper-button-prev {
   left: 12px;
@@ -145,7 +146,7 @@
   z-index: 5;
   // display:inline-block;
   // text-shadow:0 0 6px rgba(0,0,0,.65);  /* keeps text legible */
-  width: max(80vw,30rem);
+  width: max(80vw,25rem);
   // width: clamp(calc(var(--banner-titleblock-width)* 1.2rem), calc(var(--banner-titleblock-width)* 2.5vw), calc(var(--banner-titleblock-width)* 2.5rem));                /* prevent super-long titles from overflowing */
   white-space: normal;           /* allow line breaks           */
   overflow-wrap: break-word;     /* break long words if needed  */
