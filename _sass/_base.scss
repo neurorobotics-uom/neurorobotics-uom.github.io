@@ -245,10 +245,11 @@ ul.task-list input[type="checkbox"] {
 
 .navbar {
   box-shadow: none;
-  height: 64px;         // set a fixed height
+  height: 80px;         // set a fixed height
   border-bottom: 1px solid var(--global-divider-color);
   background-color: #{$black-color};
   opacity: 0.8;
+  // font-weight: 600;
 }
 
 .navbar .dropdown-menu {
@@ -301,18 +302,19 @@ ul.task-list input[type="checkbox"] {
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-nav-text-color);
-
+    font-weight: 600;
     &:hover {
       color: var(--global-hover-color);
     }
   }
 
   .navbar-nav .nav-item.active > .nav-link {
-    background-color: inherit;
-    font-weight: bolder;
-    color: var(--global-theme-color);
+    // color: var(--global-theme-color);
+    // background-color: var(--global-theme-color);
     text-decoration: underline;
-
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.3em;
+    font-weight: 600;
     &:hover {
       color: var(--global-hover-color);
     }
@@ -974,7 +976,7 @@ footer.sticky-bottom {
 
 .lab-logo {
   content:var(--global-logo);
-  max-width: 100px;
+  max-width: 110px;
 }
 
 // Rouge Color Customization
