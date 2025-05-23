@@ -7,7 +7,7 @@ banner_subline:  ""
 title: About
 permalink: /
 subtitle:
-hire_banner_title: "We are looking for highly energetic and curious PhD students. If you are interested in joining us, please contact zhenhong.li@manchester.ac.uk"
+hire_banner_title: "We are looking for enthusiastic candidates to conduct PhD research. If you are interested in joining us, please contact zhenhong.li@manchester.ac.uk"
 
 
 # profile:
