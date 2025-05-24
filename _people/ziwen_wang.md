@@ -3,7 +3,7 @@ layout: profiles
 title: Ziwen Wang
 description: EEG
 img: assets/img/people/ziwen_wang.jpg
-redirect: 
+redirect: /people/
 year: 2023.04
 category: PhD Students
 email: ziwen.wang@manchester.ac.uk

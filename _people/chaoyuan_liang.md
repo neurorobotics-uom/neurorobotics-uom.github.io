@@ -3,7 +3,7 @@ layout: profiles
 title: Chaoyuan Liang
 description: fNIRS
 img: assets/img/people/chaoyuan_liang.jpg
-redirect: 
+redirect: /people/
 year: 2024.09
 category: PhD Students
 email: chaoyuan.liang@posgrad.manchester.ac.uk

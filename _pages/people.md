@@ -14,7 +14,9 @@ display_categories: [Principal Investigator, PhD Students]
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized people -->
   {%- for category in page.display_categories %}
-  <h3 class="category">{{ category }}</h3>
+  <a id="{{ category }}" href=".#{{ category }}">
+    <h2 class="category">{{ category }}</h2>
+  </a>
   {%- assign categorized_people = site.people | where: "category", category -%}
   {%- assign sorted_people = categorized_people | sort: "year" %}
   <!-- Generate cards for each people -->
