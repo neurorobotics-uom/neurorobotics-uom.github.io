@@ -67,8 +67,8 @@ ninja.data = [{
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/5_facilities/";
-            },},{id: "facilities-vicon-motion-capture-system",
-          title: 'Vicon Motion Capture System',
+            },},{id: "facilities-motion-capture-system-with-10-vicon-cameras",
+          title: 'Motion Capture System with 10 VICON Cameras',
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/6_facilities/";
