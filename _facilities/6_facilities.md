@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vicon Motion Capture System
+title: Motion Capture System with 10 VICON Cameras
 description: 
 img: assets/img/facilities/Vicon.png
 importance: 1
