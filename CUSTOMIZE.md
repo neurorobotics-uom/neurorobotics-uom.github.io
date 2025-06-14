@@ -178,7 +178,7 @@ There are several custom bibtex keywords that you can use to affect how the entr
 - `poster`: Adds a "Poster" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
 - `slides`: Adds a "Slides" button redirecting to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
 - `supp`: Adds a "Supp" button to a specified file (if a full link is not specified, the file will be assumed to be placed in the /assets/pdf/ directory)
-- `website`: Adds a "Website" button redirecting to the specified link
+- `webpage`: Adds a "Webpage" button redirecting to the specified link
 
 You can implement your own buttons by editing the [\_layouts/bib.liquid](_layouts/bib.liquid) file.
 
