@@ -38,7 +38,7 @@ latest_posts:
 ---
 
 
-Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by [Dr. Zhenhong Li](https://alvishub.github.io/), we conduct research at the intersection of neuroscience, biomechanics, and robotics, with a focus on brain–computer interfaces, neuromusculoskeletal modeling, and robot-assisted interventions.  We aim to understand human neuromechanical function, advance physiological signal processing, and develop intelligent control systems for assistive and medical robots.  Our mission is to develop human-centered assistive and rehabilitative technologies to improve quality of life through interdisciplinary innovation.
+Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by [Dr. Zhenhong Li](https://zhenhong-li.github.io/), we conduct research at the intersection of neuroscience, biomechanics, and robotics, with a focus on brain–computer interfaces, neuromusculoskeletal modeling, and robot-assisted interventions.  We aim to understand human neuromechanical function, advance physiological signal processing, and develop intelligent control systems for assistive and medical robots.  Our mission is to develop human-centered assistive and rehabilitative technologies to improve quality of life through interdisciplinary innovation.
 
 We welcome students from a wide range of backgrounds: biomedical engineering, mechanical engineering, computer science, control engineering, and robotics.
 
