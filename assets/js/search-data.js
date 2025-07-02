@@ -174,22 +174,22 @@ ninja.data = [{
               window.location.href = "/people/ziwen_wang/";
             },},{id: "projects-freephri-flexible-robust-and-efficient-physical-human-robot-interaction-with-iterative-learning-and-self-triggered-role-adaption",
           title: 'FREEpHRI: Flexible, Robust and Efficient physical Human-robot Interaction with iterative learning and self-triggered...',
-          description: "",
+          description: "Principal Investigator",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-a-novel-robotic-navigation-system-for-precise-transcranial-magnetic-brain-stimulation",
           title: 'A novel robotic navigation system for precise transcranial magnetic brain stimulation',
-          description: "",
+          description: "Principal Investigator",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project/";
             },},{id: "projects-pro-rehab-personalized-musculoskeletal-model-for-safety-critical-robot-assisted-ankle-rehabilitation",
           title: 'PRO-Rehab: Personalized musculoskeletal model for safety-critical RObot-assisted ankle Rehabilitation',
-          description: "",
+          description: "Principal Investigator",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project/";
-            },},{id: "projects-project-4",
-          title: 'project 4',
-          description: "another without an image",
+            },},{id: "projects-pioneering-foundational-ai-models-for-brain-computer-interfaces-and-neuro-robotic-control",
+          title: 'Pioneering Foundational AI Models for Brain Computer Interfaces and Neuro-Robotic Control',
+          description: "Co-Investigator",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project/";
             },},{id: "projects-project-5",
