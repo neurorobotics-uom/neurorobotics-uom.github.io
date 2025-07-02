@@ -1,10 +1,12 @@
 ---
 layout: page
-title: project 4
-description: another without an image
-img:
-importance: 3
-category: fun
+title: "Pioneering Foundational AI Models for Brain Computer Interfaces and Neuro-Robotic Control"
+description: Co-Investigator
+img: assets/img/project/White.png
+redirect: https://unsplash.com
+importance: 4
+category: Ongoing
+redirect: /projects/
 ---
 
 Every project has a beautiful feature showcase page.

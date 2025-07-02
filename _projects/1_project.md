@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "FREEpHRI: Flexible, Robust and Efficient physical Human-robot Interaction with iterative learning and self-triggered role adaption"
-description: ""
+description: "Principal Investigator"
 img: assets/img/project/EPSRC.png
 importance: 1
 category: Ongoing

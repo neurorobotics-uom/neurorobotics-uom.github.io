@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "PRO-Rehab: Personalized musculoskeletal model for safety-critical RObot-assisted ankle Rehabilitation"
-description: 
+description: Principal Investigator
 img: assets/img/project/Royalsociety.png
 redirect: https://unsplash.com
 importance: 3

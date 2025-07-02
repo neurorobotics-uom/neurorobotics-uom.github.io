@@ -1,7 +1,7 @@
 ---
 layout: page
-title: A novel robotic navigation system for precise transcranial magnetic brain stimulation
-description: 
+title: A novel robotic navigation system for precise transcranial magnetic brain stimulation 
+description: Principal Investigator
 img: assets/img/project/InnovateUK.png
 importance: 2
 category: Ongoing
