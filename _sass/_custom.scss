@@ -131,7 +131,13 @@
   display: block;
 }
 
-
+.mySwiper .swiper-slide video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
 
 /* centre the text block */
 .banner-overlay{
