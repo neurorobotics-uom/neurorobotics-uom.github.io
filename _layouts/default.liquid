@@ -17,6 +17,9 @@
 
   <!-- Body -->
   <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+    <!-- Background Canvas -->
+    <canvas id="neuroCanvas"></canvas>
+
     <!-- Header -->
     {% include header.liquid %}
 
@@ -52,5 +55,8 @@
 
     <!-- JavaScripts -->
     {% include scripts.liquid %}
+    
+    <!-- Particle Effect Script -->
+    <script src="{{ '/assets/js/neuro-particles.js' | relative_url }}"></script>
   </body>
 </html>

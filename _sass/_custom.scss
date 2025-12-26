@@ -277,3 +277,30 @@ font-size: clamp(1.5rem, 2.5vw, 2.5rem);
   font-weight: bolder;
   font-size: 2rem;
 }
+
+/* =========================================
+   Particle Effect Canvas Styles
+   ========================================= */
+#neuroCanvas {
+    position: fixed; /* Fixed positioning, does not scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Place at the bottom */
+    pointer-events: none; /* Allow mouse events to pass through */
+    
+    /* Background is transparent to let the site theme show through */
+    background: transparent;
+}
+
+/* Demo Card Style (Optional) */
+.demo-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
