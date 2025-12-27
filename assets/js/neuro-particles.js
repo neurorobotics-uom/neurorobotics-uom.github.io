@@ -25,6 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let particleCount; 
     let connectionDistance;
     const mouseRadius = 200;
+    
+    // Content boundaries
+    let contentLeft = 0;
+    let contentRight = 0;
 
     let mouse = { x: null, y: null };
 
@@ -61,17 +65,33 @@ document.addEventListener('DOMContentLoaded', () => {
         width = canvas.width = window.innerWidth;
         height = canvas.height = window.innerHeight;
 
-        // Calculate density based on screen area
-        // Standard reference: 1440x900 (Desktop) -> ~80 particles
-        const area = width * height;
-        particleCount = Math.floor(area / 16000);
+        // Calculate content boundaries to avoid text
+        // Try to find the main content container
+        const container = document.querySelector('.container[role="main"]') || document.querySelector('.container');
         
-        // Clamp count to reasonable limits to ensure visibility without overcrowding
-        if (particleCount < 40) particleCount = 40; // Minimum for mobile
-        if (particleCount > 100) particleCount = 100; // Maximum for large screens
+        if (container) {
+            const rect = container.getBoundingClientRect();
+            // rect.left is relative to viewport, which is what we want for fixed canvas
+            contentLeft = rect.left;
+            contentRight = rect.right;
+        } else {
+            // Fallback: assume 90% width centered
+            const contentWidth = Math.min(width * 0.9, 1140);
+            contentLeft = (width - contentWidth) / 2;
+            contentRight = contentLeft + contentWidth;
+        }
+
+        // Calculate density based on MARGIN area, not total area
+        const marginArea = (contentLeft * height) + ((width - contentRight) * height);
+        
+        // Use a slightly higher density for margins since they are narrow strips
+        particleCount = Math.floor(marginArea / 10000); 
+        
+        // Clamp count
+        if (particleCount < 10) particleCount = 0; // If margins are too small, no particles
+        if (particleCount > 80) particleCount = 80; 
 
         // Adjust connection distance based on screen size
-        // Standard reference: ~150px
         connectionDistance = Math.min(width, height) * 0.15;
         if (connectionDistance < 100) connectionDistance = 100; // Min distance
         if (connectionDistance > 160) connectionDistance = 160; // Max distance
@@ -87,17 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll interaction
-    let lastScrollY = window.scrollY;
-    window.addEventListener('scroll', () => {
-        const currentScrollY = window.scrollY;
-        const deltaY = currentScrollY - lastScrollY;
-        lastScrollY = currentScrollY;
-        
-        // Move particles opposite to scroll direction to simulate being attached to the page
-        particles.forEach(p => {
-            p.y -= deltaY; 
-        });
-    });
+    // Removed event listener based scroll update to prevent lag/jitter.
+    // Instead, we will calculate the visual position based on window.scrollY in the draw loop.
 
     class Particle {
         constructor() {
@@ -105,7 +116,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         init() {
-            this.x = Math.random() * width;
+            // Randomly choose left or right margin
+            const side = Math.random() > 0.5 ? 'left' : 'right';
+            
+            // Ensure we have space
+            if (side === 'left' && contentLeft > 10) {
+                 this.x = Math.random() * contentLeft;
+            } else if (side === 'right' && (width - contentRight) > 10) {
+                 this.x = contentRight + Math.random() * (width - contentRight);
+            } else {
+                 // If one side is too small, try the other
+                 if (contentLeft > 10) this.x = Math.random() * contentLeft;
+                 else if ((width - contentRight) > 10) this.x = contentRight + Math.random() * (width - contentRight);
+                 else this.x = -100; // Hide if no space
+            }
+
             this.y = Math.random() * height;
             this.vx = (Math.random() - 0.5) * 0.4;
             this.vy = (Math.random() - 0.5) * 0.4;
@@ -116,18 +141,42 @@ document.addEventListener('DOMContentLoaded', () => {
             this.x += this.vx;
             this.y += this.vy;
 
-            if (this.x < 0 || this.x > width) this.vx *= -1;
+            // Strict boundary enforcement
+            // If particle wanders into the content area, push it out
+            if (this.x > contentLeft && this.x < contentRight) {
+                // Push to the nearest side
+                if (Math.abs(this.x - contentLeft) < Math.abs(this.x - contentRight)) {
+                    this.x = contentLeft - 1;
+                    this.vx = -Math.abs(this.vx); // Force move left
+                } else {
+                    this.x = contentRight + 1;
+                    this.vx = Math.abs(this.vx); // Force move right
+                }
+            }
+
+            // Screen boundaries
+            if (this.x < 0) { this.vx *= -1; this.x = 0; }
+            if (this.x > width) { this.vx *= -1; this.x = width; }
             
             // Wrap around vertically for continuous scrolling feel
             if (this.y < 0) this.y += height;
             if (this.y > height) this.y -= height;
         }
 
-        draw() {
+        // Calculate visible Y position based on scroll
+        getVisibleY() {
+            const scrollY = window.scrollY;
+            // Calculate offset: move particles up as we scroll down
+            // Use double modulo to handle negative numbers correctly
+            let visibleY = ((this.y - scrollY) % height + height) % height;
+            return visibleY;
+        }
+
+        draw(visibleY) {
             ctx.beginPath();
-            ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-            // Use dynamic text color with low opacity for subtle effect
-            ctx.fillStyle = hexToRgba(textColor, 0.25); 
+            ctx.arc(this.x, visibleY, this.radius, 0, Math.PI * 2);
+            // Use theme color with higher opacity for better visibility
+            ctx.fillStyle = hexToRgba(themeColor, 0.6); 
             ctx.fill();
         }
     }
@@ -137,30 +186,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
         particles.forEach(p => {
             p.update();
-            p.draw();
+            p.draw(p.getVisibleY());
         });
 
         for (let i = 0; i < particles.length; i++) {
+            const p1 = particles[i];
+            const p1y = p1.getVisibleY();
+
             for (let j = i + 1; j < particles.length; j++) {
-                const dx = particles[i].x - particles[j].x;
-                const dy = particles[i].y - particles[j].y;
+                const p2 = particles[j];
+                const p2y = p2.getVisibleY();
+
+                // Check distance with visible coordinates
+                const dx = p1.x - p2.x;
+                const dy = p1y - p2y;
+                
+                // If vertical distance is too large (due to wrapping), skip connection
+                if (Math.abs(dy) > connectionDistance) continue;
+
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < connectionDistance) {
-                    const alpha = (1 - dist / connectionDistance) * 0.25;
-                    ctx.lineWidth = 0.8;
-                    // Use dynamic text color for lines as well
-                    ctx.strokeStyle = hexToRgba(textColor, alpha); 
+                    const alpha = (1 - dist / connectionDistance) * 0.5;
+                    ctx.lineWidth = 1.0;
+                    // Use theme color for lines as well
+                    ctx.strokeStyle = hexToRgba(themeColor, alpha); 
                     ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
-                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.moveTo(p1.x, p1y);
+                    ctx.lineTo(p2.x, p2y);
                     ctx.stroke();
 
                     // 信号脉冲：使用主题色
                     if (Math.random() > 0.999) {
                         signals.push({
-                            from: particles[i],
-                            to: particles[j],
+                            from: p1,
+                            to: p2,
                             pos: 0,
                             speed: 0.01 + Math.random() * 0.01
                         });
@@ -170,8 +230,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // 鼠标交互：使用主题色
             if (mouse.x !== null) {
-                const dx = particles[i].x - mouse.x;
-                const dy = particles[i].y - mouse.y;
+                const dx = p1.x - mouse.x;
+                const dy = p1y - mouse.y;
                 const mDist = Math.sqrt(dx * dx + dy * dy);
 
                 if (mDist < mouseRadius) {
@@ -180,12 +240,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     // 动态调用你的 CSS 变量颜色
                     ctx.strokeStyle = hexToRgba(themeColor, mAlpha); 
                     ctx.beginPath();
-                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.moveTo(p1.x, p1y);
                     ctx.lineTo(mouse.x, mouse.y);
                     ctx.stroke();
                     
                     ctx.beginPath();
-                    ctx.arc(particles[i].x, particles[i].y, particles[i].radius * 1.5, 0, Math.PI * 2);
+                    ctx.arc(p1.x, p1y, p1.radius * 1.5, 0, Math.PI * 2);
                     ctx.fillStyle = hexToRgba(themeColor, mAlpha);
                     ctx.fill();
                 }
@@ -197,8 +257,15 @@ document.addEventListener('DOMContentLoaded', () => {
             s.pos += s.speed;
             if (s.pos >= 1) return false;
 
+            // Calculate visible positions for signal
+            const p1y = s.from.getVisibleY();
+            const p2y = s.to.getVisibleY();
+            
+            // If the connection is broken visually (wrapped), don't draw signal
+            if (Math.abs(p1y - p2y) > connectionDistance) return false;
+
             const sx = s.from.x + (s.to.x - s.from.x) * s.pos;
-            const sy = s.from.y + (s.to.y - s.from.y) * s.pos;
+            const sy = p1y + (p2y - p1y) * s.pos;
 
             ctx.beginPath();
             ctx.arc(sx, sy, 2, 0, Math.PI * 2);
