@@ -56,8 +56,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initParticles() {
         particles = [];
+        const minDistance = 30; // Minimum distance between particles to prevent overcrowding
+        
         for (let i = 0; i < particleCount; i++) {
-            particles.push(new Particle());
+            let p = new Particle();
+            let attempts = 0;
+            let valid = false;
+            
+            // Try to place particle such that it's not too close to others
+            while (!valid && attempts < 15) {
+                valid = true;
+                for (let j = 0; j < particles.length; j++) {
+                    const other = particles[j];
+                    const dx = p.x - other.x;
+                    const dy = p.y - other.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < minDistance) {
+                        valid = false;
+                        break;
+                    }
+                }
+                
+                if (!valid) {
+                    p.init(); // Re-randomize position
+                    attempts++;
+                }
+            }
+            
+            if (valid) {
+                particles.push(p);
+            }
         }
     }
 
@@ -85,16 +113,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const marginArea = (contentLeft * height) + ((width - contentRight) * height);
         
         // Use a slightly higher density for margins since they are narrow strips
-        particleCount = Math.floor(marginArea / 10000); 
+        particleCount = Math.floor(marginArea / 8000); 
         
         // Clamp count
         if (particleCount < 10) particleCount = 0; // If margins are too small, no particles
-        if (particleCount > 80) particleCount = 80; 
+        if (particleCount > 150) particleCount = 150; 
 
         // Adjust connection distance based on screen size
-        connectionDistance = Math.min(width, height) * 0.15;
-        if (connectionDistance < 100) connectionDistance = 100; // Min distance
-        if (connectionDistance > 160) connectionDistance = 160; // Max distance
+        connectionDistance = Math.min(width, height) * 0.25;
+        if (connectionDistance < 120) connectionDistance = 120; // Min distance
+        if (connectionDistance > 220) connectionDistance = 220; // Max distance
 
         initParticles();
     }
@@ -134,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.y = Math.random() * height;
             this.vx = (Math.random() - 0.5) * 0.4;
             this.vy = (Math.random() - 0.5) * 0.4;
-            this.radius = Math.random() * 2.5 + 1.5;
+            this.radius = Math.random() * 3 + 2;
         }
 
         update() {
@@ -175,8 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
         draw(visibleY) {
             ctx.beginPath();
             ctx.arc(this.x, visibleY, this.radius, 0, Math.PI * 2);
-            // Use theme color with higher opacity for better visibility
-            ctx.fillStyle = hexToRgba(themeColor, 0.6); 
+            // Use theme color for a softer, unified look
+            ctx.fillStyle = hexToRgba(themeColor, 0.4); 
             ctx.fill();
         }
     }
@@ -207,16 +235,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dist = Math.sqrt(dx * dx + dy * dy);
 
                 if (dist < connectionDistance) {
-                    const alpha = (1 - dist / connectionDistance) * 0.5;
+                    const alpha = (1 - dist / connectionDistance) * 0.3;
                     ctx.lineWidth = 1.0;
-                    // Use theme color for lines as well
+                    // Use theme color for lines
                     ctx.strokeStyle = hexToRgba(themeColor, alpha); 
                     ctx.beginPath();
                     ctx.moveTo(p1.x, p1y);
                     ctx.lineTo(p2.x, p2y);
                     ctx.stroke();
 
-                    // 信号脉冲：使用主题色
+                    // 信号脉冲：已关闭
+                    /*
                     if (Math.random() > 0.999) {
                         signals.push({
                             from: p1,
@@ -225,6 +254,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             speed: 0.01 + Math.random() * 0.01
                         });
                     }
+                    */
                 }
             }
 
