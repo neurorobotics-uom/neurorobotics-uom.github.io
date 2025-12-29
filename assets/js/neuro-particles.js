@@ -7,12 +7,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. 动态获取 CSS 变量颜色
     // Function to update colors based on current theme
     let themeColor, textColor;
+    let themeColorRgb = '181, 9, 172'; // Default RGB string
     
     function updateColors() {
         const styles = getComputedStyle(document.documentElement);
         themeColor = styles.getPropertyValue('--global-theme-color').trim() || '#b509ac';
         // Use text color for particles to ensure visibility in both light and dark modes
         textColor = styles.getPropertyValue('--global-text-color').trim() || '#000000';
+        
+        // Pre-calculate RGB string for theme color to avoid regex in loop
+        if (themeColor.startsWith('#')) {
+            let c = themeColor.substring(1).split('');
+            if(c.length== 3){
+                c= [c[0], c[0], c[1], c[1], c[2], c[2]];
+            }
+            c= '0x'+c.join('');
+            themeColorRgb = [(c>>16)&255, (c>>8)&255, c&255].join(',');
+        } else if (themeColor.startsWith('rgb')) {
+            themeColorRgb = themeColor.match(/\d+, \d+, \d+/)[0];
+        }
     }
     
     updateColors();
@@ -211,37 +224,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function drawScene() {
         ctx.clearRect(0, 0, width, height);
+        
+        const scrollY = window.scrollY;
+        const connectionDistSq = connectionDistance * connectionDistance;
 
+        // Pre-calculate visible Y positions for all particles
         particles.forEach(p => {
             p.update();
-            p.draw(p.getVisibleY());
+            // Calculate offset: move particles up as we scroll down
+            // Use double modulo to handle negative numbers correctly
+            p.visibleY = ((p.y - scrollY) % height + height) % height;
+            
+            // Draw particle
+            ctx.beginPath();
+            ctx.arc(p.x, p.visibleY, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${themeColorRgb}, 0.4)`; 
+            ctx.fill();
         });
 
         for (let i = 0; i < particles.length; i++) {
             const p1 = particles[i];
-            const p1y = p1.getVisibleY();
 
             for (let j = i + 1; j < particles.length; j++) {
                 const p2 = particles[j];
-                const p2y = p2.getVisibleY();
 
                 // Check distance with visible coordinates
                 const dx = p1.x - p2.x;
-                const dy = p1y - p2y;
+                
+                // Quick check for X distance
+                if (Math.abs(dx) > connectionDistance) continue;
+
+                const dy = p1.visibleY - p2.visibleY;
                 
                 // If vertical distance is too large (due to wrapping), skip connection
                 if (Math.abs(dy) > connectionDistance) continue;
 
-                const dist = Math.sqrt(dx * dx + dy * dy);
+                // Use squared distance to avoid expensive sqrt
+                const distSq = dx * dx + dy * dy;
 
-                if (dist < connectionDistance) {
+                if (distSq < connectionDistSq) {
+                    const dist = Math.sqrt(distSq);
                     const alpha = (1 - dist / connectionDistance) * 0.3;
                     ctx.lineWidth = 1.0;
-                    // Use theme color for lines
-                    ctx.strokeStyle = hexToRgba(themeColor, alpha); 
+                    // Use pre-calculated RGB string
+                    ctx.strokeStyle = `rgba(${themeColorRgb}, ${alpha})`; 
                     ctx.beginPath();
-                    ctx.moveTo(p1.x, p1y);
-                    ctx.lineTo(p2.x, p2y);
+                    ctx.moveTo(p1.x, p1.visibleY);
+                    ctx.lineTo(p2.x, p2.visibleY);
                     ctx.stroke();
 
                     // 信号脉冲：已关闭
@@ -261,22 +290,24 @@ document.addEventListener('DOMContentLoaded', () => {
             // 鼠标交互：使用主题色
             if (mouse.x !== null) {
                 const dx = p1.x - mouse.x;
-                const dy = p1y - mouse.y;
-                const mDist = Math.sqrt(dx * dx + dy * dy);
+                const dy = p1.visibleY - mouse.y;
+                const distSq = dx * dx + dy * dy;
+                const mouseRadiusSq = mouseRadius * mouseRadius;
 
-                if (mDist < mouseRadius) {
+                if (distSq < mouseRadiusSq) {
+                    const mDist = Math.sqrt(distSq);
                     const mAlpha = (1 - mDist / mouseRadius) * 0.5;
                     ctx.lineWidth = 1.2;
                     // 动态调用你的 CSS 变量颜色
-                    ctx.strokeStyle = hexToRgba(themeColor, mAlpha); 
+                    ctx.strokeStyle = `rgba(${themeColorRgb}, ${mAlpha})`; 
                     ctx.beginPath();
-                    ctx.moveTo(p1.x, p1y);
+                    ctx.moveTo(p1.x, p1.visibleY);
                     ctx.lineTo(mouse.x, mouse.y);
                     ctx.stroke();
                     
                     ctx.beginPath();
-                    ctx.arc(p1.x, p1y, p1.radius * 1.5, 0, Math.PI * 2);
-                    ctx.fillStyle = hexToRgba(themeColor, mAlpha);
+                    ctx.arc(p1.x, p1.visibleY, p1.radius * 1.5, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${themeColorRgb}, ${mAlpha})`;
                     ctx.fill();
                 }
             }
@@ -288,8 +319,9 @@ document.addEventListener('DOMContentLoaded', () => {
             if (s.pos >= 1) return false;
 
             // Calculate visible positions for signal
-            const p1y = s.from.getVisibleY();
-            const p2y = s.to.getVisibleY();
+            // Use cached visibleY if available, or recalculate if needed (though signals are disabled now)
+            const p1y = s.from.visibleY !== undefined ? s.from.visibleY : s.from.getVisibleY();
+            const p2y = s.to.visibleY !== undefined ? s.to.visibleY : s.to.getVisibleY();
             
             // If the connection is broken visually (wrapped), don't draw signal
             if (Math.abs(p1y - p2y) > connectionDistance) return false;
