@@ -42,46 +42,43 @@ Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by [
 
 We welcome students from a wide range of backgrounds: biomedical engineering, mechanical engineering, computer science, control engineering, and robotics.
 
+<!-- Swiper CSS: 使用 Liquid 标签修复路径 -->   
+<link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}"/>
 
+<!-- Swiper JS: 使用 Liquid 标签修复路径 -->
+<script src="{{ '/assets/js/swiper-bundle.min.js' | relative_url }}"></script>
 
-
-<!-- Swiper CSS load external function-->   
-<link rel="stylesheet" href="/assets/css/swiper-bundle.min.css"/>
-
-
-<script src="/assets/js/swiper-bundle.min.js"></script>
 <script>
-  var swiper = new Swiper('.mySwiper', {
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true
-    },
-    speed: 1000,  // 动画切换时长，单位毫秒
-    loop: true,
-    autoplay: {
-      delay: 4000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-    cubeEffect: {
-    shadow: false,           // 显示阴影
-    slideShadows: true,     // 幻灯片阴影
-    shadowOffset: 60,
-    shadowScale: 0.94
-  },
-  coverflowEffect: {
-  rotate: 50,
-  stretch: 0,
-  depth: 100,
-  modifier: 1,
-  slideShadows: false
-}
+  // 关键修复：等待 DOM 加载完毕
+  document.addEventListener("DOMContentLoaded", function() {
+    var swiper = new Swiper('.mySwiper', {
+      // 关键修复：添加观察者，解决加载时样式未就绪导致的问题
+      observer: true,
+      observeParents: true,
+
+      effect: 'fade',
+      fadeEffect: {
+        crossFade: true
+      },
+      speed: 1000, 
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      // 注意：如果使用了 fade 效果，cubeEffect 和 coverflowEffect 通常会被忽略或导致冲突，建议注释掉不使用的效果参数保持配置整洁
+      /* 
+      cubeEffect: { ... },
+      coverflowEffect: { ... } 
+      */
+    });
   });
 </script>
