@@ -10,6 +10,9 @@ layout: default
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
+          <img src="{{ '/assets/img/banner/TMS_banner2.png' | relative_url }}" alt="TMS Banner" class="w-100" />
+        </div>
+        <div class="swiper-slide">
           <video autoplay muted loop playsinline>
             <!-- 修复 1: 添加 relative_url -->
             <source src="{{ '/assets/img/banner/EEG_banner.mp4' | relative_url }}" type="video/mp4">
@@ -17,15 +20,12 @@ layout: default
           </video>
         </div>
         <div class="swiper-slide">
-          <!-- 修复 2: 添加 relative_url 并确保 style 占满容器 -->
           <img src="{{ '/assets/img/banner/TMS_banner2.png' | relative_url }}" alt="TMS Banner" class="w-100" />
         </div>
         <div class="swiper-slide">
-          <!-- 修复 3: 添加 relative_url -->
           <img src="{{ '/assets/img/banner/EMG_banner.png' | relative_url }}" alt="EMG Banner" class="w-100" />
         </div>
         <div class="swiper-slide">
-          <!-- 修复 4: 添加 relative_url -->
           <img src="{{ '/assets/img/banner/hiring3.png' | relative_url }}" alt="Hiring Banner" class="w-100" />
         </div>
       </div>
