@@ -63,7 +63,7 @@ We welcome students from a wide range of backgrounds: biomedical engineering, me
       speed: 1000, 
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false
       },
       pagination: {
