@@ -4,7 +4,7 @@ title: Wenzhi Bai
 description: Robo-TMS
 img: assets/img/people/wenzhi_bai.png
 redirect: https://wenzhibai.github.io/
-year: 2024.04
+year: 2024.04.15
 category: PhD Students
 email: wenzhi.bai@manchester.ac.uk
 linkedin: wenzhi-bai
