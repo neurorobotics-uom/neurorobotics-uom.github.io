@@ -42,6 +42,11 @@ ninja.data = [{
           description: "",
           section: "Facilities",handler: () => {
               window.location.href = "/facilities/10_facilities/";
+            },},{id: "facilities-optical-tracking-and-neuronavigation-system",
+          title: 'Optical Tracking and Neuronavigation System',
+          description: "",
+          section: "Facilities",handler: () => {
+              window.location.href = "/facilities/11_facilities/";
             },},{id: "facilities-franka-research-3",
           title: 'Franka Research 3',
           description: "",
