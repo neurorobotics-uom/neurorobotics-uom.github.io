@@ -185,6 +185,11 @@ ninja.data = [{
           description: "Robo-TMS",
           section: "People",handler: () => {
               window.location.href = "/people/wenzhi_bai/";
+            },},{id: "people-xiaoyang-huang",
+          title: 'Xiaoyang Huang',
+          description: "EEG",
+          section: "People",handler: () => {
+              window.location.href = "/people/xiaoyang_huang/";
             },},{id: "people-yituo-guo",
           title: 'Yituo Guo',
           description: "Exosuit",
