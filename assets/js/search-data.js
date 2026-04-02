@@ -195,6 +195,11 @@ ninja.data = [{
           description: "Exosuit",
           section: "People",handler: () => {
               window.location.href = "/people/yituo_guo/";
+            },},{id: "people-yuqi-fu",
+          title: 'Yuqi Fu',
+          description: "",
+          section: "People",handler: () => {
+              window.location.href = "/people/yuqi_fu/";
             },},{id: "people-zhenhong-li",
           title: 'Zhenhong Li',
           description: "Lecturer in Robotics and Control",
