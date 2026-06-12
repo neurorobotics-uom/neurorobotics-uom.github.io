@@ -38,9 +38,32 @@ latest_posts:
 ---
 
 
-Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by [Dr. Zhenhong Li](https://zhenhong-li.github.io/), we conduct research at the intersection of neuroscience, biomechanics, and robotics, with a focus on brain–computer interfaces, neuromusculoskeletal modeling, and robot-assisted interventions.  We aim to understand human neuromechanical function, advance physiological signal processing, and develop intelligent control systems for assistive and medical robots.  Our mission is to develop human-centered assistive and rehabilitative technologies to improve quality of life through interdisciplinary innovation.
+<div class="row g-4 align-items-start mb-4">
+  <div class="col-12 col-md-6 col-lg-7">
+    <p>
+      Welcome to the Neurorobotics Lab (NRL) at the University of Manchester. Led by <a href="https://zhenhong-li.github.io/">Dr. Zhenhong Li</a>, we conduct research at the intersection of neuroscience, biomechanics, and robotics, with a focus on brain-computer interfaces, neuromusculoskeletal modeling, and robot-assisted interventions. We aim to understand human neuromechanical function, advance physiological signal processing, and develop intelligent control systems for assistive and medical robots. Our mission is to develop human-centered assistive and rehabilitative technologies to improve quality of life through interdisciplinary innovation.
+    </p>
 
-We welcome students from a wide range of backgrounds: biomedical engineering, mechanical engineering, computer science, control engineering, and robotics.
+    <p class="mb-0">
+      We welcome students from a wide range of backgrounds: biomedical engineering, mechanical engineering, computer science, control engineering, and robotics.
+    </p>
+  </div>
+
+  <div class="col-12 col-md-6 col-lg-5">
+    <div class="rounded shadow-sm" style="overflow: hidden; background: #000;">
+      <div style="position: relative; width: 100%; padding-bottom: 56.25%;">
+        <iframe
+          src="https://www.youtube.com/embed/gfaahQwC0yM?vq=hd1440&hd=1&playsinline=1&rel=0"
+          title="Neurorobotics Lab video"
+          style="position: absolute; inset: 0; width: 100%; height: 100%; border: 0;"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- Swiper CSS: 使用 Liquid 标签修复路径 -->   
 <link rel="stylesheet" href="{{ '/assets/css/swiper-bundle.min.css' | relative_url }}"/>
