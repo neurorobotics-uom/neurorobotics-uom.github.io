@@ -206,7 +206,7 @@ ninja.data = [{
               window.location.href = "/people/yituo_guo/";
             },},{id: "people-yuqi-fu",
           title: 'Yuqi Fu',
-          description: "",
+          description: "Musculoskeletal Modelling",
           section: "People",handler: () => {
               window.location.href = "/people/yuqi_fu/";
             },},{id: "people-zhenhong-li",
