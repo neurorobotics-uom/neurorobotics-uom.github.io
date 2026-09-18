@@ -7,7 +7,7 @@ redirect: /people/
 year: 2024.04.22
 category: PhD Students
 email: wending.heng@postgrad.manchester.ac.uk
-linkedin:
+linkedin: wending-heng-845077224
 google_scholar: 
 orcid: 0009-0004-9194-4230
 github_username: 

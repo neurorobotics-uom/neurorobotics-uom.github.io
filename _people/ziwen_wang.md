@@ -7,7 +7,7 @@ redirect: /people/
 year: 2023.04
 category: PhD Students
 email: ziwen.wang@manchester.ac.uk
-linkedin:
+linkedin: ziwen-wang-a81166282
 google_scholar: 
 orcid: 0009-0008-8684-877X
 github_username: 
