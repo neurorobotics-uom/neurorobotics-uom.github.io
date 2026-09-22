@@ -3,7 +3,7 @@ layout: profiles
 title: Yuqi Fu
 description: Musculoskeletal Modelling
 img: assets/img/people/yuqi_fu.png
-redirect: 
+redirect: /people/
 year: 2026.04.02
 category: PhD Students
 email: yuqi.fu@postgrad.manchester.ac.uk
