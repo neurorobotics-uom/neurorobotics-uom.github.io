@@ -184,6 +184,11 @@ ninja.data = [{
           description: "fNIRS",
           section: "People",handler: () => {
               window.location.href = "/people/chaoyuan_liang/";
+            },},{id: "people-jixin-liang",
+          title: 'Jixin Liang',
+          description: "Robo-TMS",
+          section: "People",handler: () => {
+              window.location.href = "/people/jixin_liang/";
             },},{id: "people-wending-heng",
           title: 'Wending Heng',
           description: "EMG",
