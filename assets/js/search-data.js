@@ -189,6 +189,11 @@ ninja.data = [{
           description: "Robo-TMS",
           section: "People",handler: () => {
               window.location.href = "/people/jixin_liang/";
+            },},{id: "people-mujun-zhang",
+          title: 'Mujun Zhang',
+          description: "Robotics",
+          section: "People",handler: () => {
+              window.location.href = "/people/mujun_zhang/";
             },},{id: "people-wending-heng",
           title: 'Wending Heng',
           description: "EMG",
