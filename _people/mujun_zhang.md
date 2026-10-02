@@ -1,7 +1,7 @@
 ---
 layout: profiles
 title: Mujun Zhang
-description: Robotics
+description: Soft Manipulator
 img: assets/img/people/mujun_zhang.png
 redirect: /people/
 year: 2026.09.29
