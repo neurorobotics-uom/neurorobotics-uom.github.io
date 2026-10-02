@@ -191,7 +191,7 @@ ninja.data = [{
               window.location.href = "/people/jixin_liang/";
             },},{id: "people-mujun-zhang",
           title: 'Mujun Zhang',
-          description: "Robotics",
+          description: "Soft Manipulator",
           section: "People",handler: () => {
               window.location.href = "/people/mujun_zhang/";
             },},{id: "people-wending-heng",
